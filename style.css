@@ -1,19 +1,89 @@
+
+* {
+  border: 0;
+ }
+
+ .btn {
+  padding: 1rem 1.5rem;
+  background: var(--success);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+ }
+ 
+ :root {
+  --primary: #2b6777;
+  --secondary: #c8d8e4 ;
+  --lightgray: #f2f2f2 ;
+  --success: #52ab98;
+  --white: #ffffff;
+ }
+
+ .primary {
+  background: var(--primary);
+  color: var(--lightgray);
+ }
+ .secondary {
+  background: var(--secondary);
+  color: var(--lightgray);
+ }
+ .success {
+  background: var(--success);
+  color: var(--white);
+ }
+ .lightgray {
+  background: var(--lightgray);
+  color: var(--primary);
+ }
+ .link {
+  color: var(--primary);
+ }
+
+
 body::before {
   display: block;
   content: '';
   height: 60px;
+  font-family: Arial, Helvetica, sans-serif;
 }
-#map {
-  width: 100%;
-  height: 300px;
-  border-radius: 10px;
+nav{
+  background-color: #ffffff;
+}
+.navbar-brand{
+  color: #000;
+}
+.nav-link{
+  color: #52ab98a4;
+}
+.card{
+  background-color: #52ab98b6;
+}
+#showcase{
+  background-color: #2b6777;
+}
+#news{
+  background-color: #c8d8e4 ;
 }
 #methodologies{
-  background-color: #e9b35d;
+  background-color: #e9b35d8a;
 }
 #facts{
-  background-color: #fffbf3;
+  background-color: #f2f2f2;
 }
+#contact{
+  background-color: #f2f2f2;
+}
+#footer{
+  background-color: #232c3f;
+}
+#fundamental{
+  background-color: #ffffff;
+}
+#learn{
+  background-color: rgb(203, 124, 122, 0.5);
+}
+
 .social-menu ul{
   position: relative;
   display: flex;
@@ -57,6 +127,41 @@ body::before {
 }
 .social-menu ul li:nth-child(3) a:hover{
   background-color: #E4405F;
+}
+
+#back-to-top{
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  color: #ee2c74;
+  border-radius: 3px;
+  float: left;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  z-index: 900;
+  background-color: transparent;
+  text-decoration: none;
+}
+#back-to-top:focus,#back-to-top:hover {
+  color: #2c69ee;
+  background: #f0f0f0;
+}
+#back-to-top .bi {
+    font-size: 30px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bi-caret-up::before {
+  content: "\f238";
+}
+*, :after, :before {
+  box-sizing: border-box;
 }
 
 .card-img-top {

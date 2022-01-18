@@ -1,8 +1,23 @@
-// var myName = window.prompt("What's your name");
+var mybutton = document.getElementById("back-to-top");
 
-// console.log("hello", myName)
+// When the user scrolls down 30px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
 
-document.getElementById("myButton").onclick = function(){
-    var myName = document.getElementById("myText").value;
-    console.log("Hello", myName);
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
