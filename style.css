@@ -1,6 +1,7 @@
 
 * {
   border: 0;
+  box-sizing: border-box;
  }
 
  .btn {
@@ -13,12 +14,13 @@
  }
  
  :root {
+  -webkit-font-smoothing: antialiased;
   --primary: #2b6777;
   --secondary: #c8d8e4 ;
   --lightgray: #f2f2f2 ;
   --success: #52ab98;
   --white: #ffffff;
- }
+}
 
  .primary {
   background: var(--primary);
@@ -45,7 +47,7 @@ body::before {
   display: block;
   content: '';
   height: 60px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Times New Roman', Times, serif;
 }
 nav{
   background-color: #ffffff;
@@ -196,3 +198,28 @@ nav{
   }
 }
 
+.modal-content{
+  border-radius: 20px;
+  background: rgb(0,0,0,0.6);
+  transform: translate(50,50);
+}
+.modal-open .container-fluid, .modal-open  .container {
+  -webkit-filter: blur(5px) grayscale(90%);
+  filter: blur(5px);
+}
+.modal-content .mb-3{
+  color: var(--white);
+}
+.modal-content .modal-title{
+  text-transform: uppercase;
+  color: var(--white);
+}
+.modal-body p {
+  color: var(--white);
+  text-align: center;
+}
+.modal-dialog input[type=text]{
+  border: 1px solid rgb(236, 236, 236);
+  background: transparent;
+  color: var(--white);
+}
