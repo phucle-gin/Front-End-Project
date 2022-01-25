@@ -319,7 +319,7 @@
         </p>
         <div class="row g-4  justify-content-center">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-            <div class="card bg-light">
+            <div class="card card-meth bg-light">
               <div class="card-body text-center">
                 <img src="img/explore.svg" alt="explore" class="card-img-top img-fluid mb-1">
                 <h3 class="card-title mb-3">Exploring</h3> 
@@ -330,7 +330,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-            <div class="card bg-light">
+            <div class="card card-meth bg-light">
               <div class="card-body text-center">
                 <img src="img/structure.svg" alt="structure" class="card-img-top img-fluid mb-1">
                 <h3 class="card-title mb-3">Structuring</h3> 
@@ -341,7 +341,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-            <div class="card bg-light">
+            <div class="card card-meth bg-light">
               <div class="card-body text-center">
                 <img src="img/ideas.svg" alt="visual" class="card-img-top img-fluid mb-1">
                 <h3 class="card-title mb-3">Imaging</h3> 
@@ -352,7 +352,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-            <div class="card bg-light">
+            <div class="card card-meth bg-light">
               <div class="card-body text-center">
                 <img src="img/wireframe.svg" alt="designing" class="card-img-top img-fluid mb-1 ">
                 <h3 class="card-title mb-3">Designing</h3> 
@@ -363,7 +363,7 @@
             </div>
           </div>
           <div class=" col-md-6 col-lg-3 d-flex align-items-stretch">
-            <div class="card bg-light">
+            <div class="card card-meth bg-light">
               <div class="card-body text-center">
                 <img src="img/testing.svg" alt="testing" class="card-img-top img-fluid mb-1">
                 <h3 class="card-title mb-3">Testing</h3> 
@@ -374,7 +374,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="card bg-light">
+            <div class="card card-meth bg-light">
               <div class="card-body text-center">
                 <img src="img/deploy.svg" alt="explore" class="card-img-top img-fluid mb-1">
                 <h3 class="card-title mb-3">Deploying</h3> 
@@ -490,5 +490,14 @@
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".card-meth"), {
+        max: 30,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+      });
+    </script> 
 </body>
 </html>
