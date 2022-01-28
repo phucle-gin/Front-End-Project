@@ -213,14 +213,25 @@ nav{
   object-fit: contain;
 }
 
-.card .card-meth{
-  position: relative;
-  box-shadow:0 6px 5px #e9b35dce;
-  border-radius: 3em;
 
+.meth {
+  
+}
+.card-meth{
+  box-shadow:0 6px 5px #e9b35dce;
+  border-radius: 40px;
+  overflow: hidden;
 }
 .card-meth:hover{
   transform-style: preserve-3d ;
+  }
+  .card-meth:hover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
   }
 
 .card-body{
