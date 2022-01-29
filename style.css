@@ -1,6 +1,8 @@
 * {
   border: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding:0;
  }
  :root {
   -webkit-font-smoothing: antialiased;
@@ -208,35 +210,50 @@ nav{
 .bi-caret-up::before {
   content: "\f238";
 }
-.card-img-top {
-  /*height: 11vw;*/
-  object-fit: contain;
+container-meth{
+  width: 100%;
+  height: 100%;
+  background-color: #f5f3ef;
+}
+.container-meth .row {
+  padding: 1rem;
 }
 
+.container-meth .row .col-lg-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  float: none;
+}
+.container-meth .card-meth{
+  height: 320px;
+  width: 300px;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.card-meth .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.meth {
-  
 }
 .card-meth{
-  box-shadow:0 6px 5px #e9b35dce;
-  border-radius: 40px;
-  overflow: hidden;
+  box-shadow: 2px 5px 2px #e9b35d86;
+  transition: all 200ms cubic-bezier(.164, .317, .38, .767);
 }
 .card-meth:hover{
   transform-style: preserve-3d ;
+  box-shadow: 10px 10px 6px #e9b35d86;
   }
-  .card-meth:hover:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-
 .card-body{
   transform: perspective(1000px);
   transform: translateZ(50px);
+}
+.card-img-top {
+  height: 11vw;
+  object-fit: contain;
+  width: 100%;
 }
 .modal-content{
   border-radius: 20px;
@@ -263,14 +280,16 @@ nav{
   background: transparent;
   color: var(--white);
 }
+
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   .card-img-top {
       height: 19vw;
+      ;
   }
 }
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .card-img-top {
       height: 16vw;
   }
@@ -279,14 +298,14 @@ nav{
   }
 }
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .card-img-top {
       height: 11vw;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .card-img-top {
-      height: 11vw;
+      height: 8vw;
   }
 }
