@@ -5,7 +5,6 @@
   padding:0;
  }
  :root {
-  -webkit-font-smoothing: antialiased;
   --primary: #2b6777;
   --secondary: #c8d8e4 ;
   --lightgray: #f2f2f2 ;
@@ -15,10 +14,23 @@
 } 
 
 body::before {
+  -webkit-font-smoothing: antialiased;
   display: block;
   content: '';
   height: 60px;
   font-family:'Times New Roman', Times, serif;
+}
+section .home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section{
+  position: relative;
+}
+.home .container{
+  position: relative;
+  width: 100%;
 }
 
  .btn, .btn:focus{
@@ -44,7 +56,6 @@ body::before {
   text-decoration: none;
   background-color: var(--lightgray);
  }
-
 .btn-card, .btn-card:active, .btn-card:focus{
   color: var(--primary);
   background-color: var(--lightgray);
@@ -76,10 +87,10 @@ nav{
   white-space: nowrap;
 }
 .card{
-  background-color: var(--success);
+  background-color: #44b39bb6;
 }
 #showcase{
-  background-color: #2b6777;
+ background-color: var(--primary);
 }
 #news{
   background-color: #c8d8e4 ;
@@ -210,6 +221,30 @@ nav{
 .bi-caret-up::before {
   content: "\f238";
 }
+
+.bg{
+  width: 100%;
+  z-index: 0;
+}
+.bg .curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.curve svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 118px;
+}
+.curve .shape-fill {
+  fill: #FFFFFF;
+}
+
 container-meth{
   width: 100%;
   height: 100%;
@@ -282,10 +317,20 @@ container-meth{
 }
 
 /* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 576px) {
+  .card-img-top {
+      height: 19vw;
+  }
+  .home{
+    height: 492px;
+  }
+}
 @media screen and (min-width: 576px) {
   .card-img-top {
       height: 19vw;
-      ;
+  }
+  .home{
+    height: 642px;
   }
 }
 /* Medium devices (tablets, 768px and up) */
@@ -296,16 +341,45 @@ container-meth{
   .news-input{
     width:50%;
   }
+  .curve{
+    width: 1340px;
+  }
+  .home{
+    height: 542px;
+  }
 }
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
   .card-img-top {
       height: 11vw;
   }
+  .curve{
+    width: 1440px;
+  }
+  .home{
+    height: 538px;
+  }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
   .card-img-top {
       height: 8vw;
+  }
+  .curve{
+    width: 1920px;
+  }
+  .home{
+    height: 592px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card-img-top {
+      height: 8vw;
+  }
+  .curve{
+    width: 1920px;
+  }
+  .home{
+    height: 642px;
   }
 }
