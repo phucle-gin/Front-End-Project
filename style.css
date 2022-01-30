@@ -87,10 +87,10 @@ nav{
   white-space: nowrap;
 }
 .card{
-  background-color: #44b39bb6;
+  background-color: #83C5BE;
 }
 #showcase{
- background-color: var(--primary);
+ background-color: #006D77;
 }
 #news{
   background-color: #c8d8e4 ;
@@ -111,7 +111,11 @@ nav{
   background-color: #ffffff;
 }
 #learn{
-  background-color: rgb(203, 124, 122, 0.5);
+  background-color: #EBD6D6;
+  color: #232c3f;
+}
+#learn .container{
+  color: #232c3f;
 }
 
 .social-menu ul{
