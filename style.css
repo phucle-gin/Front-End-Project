@@ -1,24 +1,26 @@
 * {
   border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding:0;
- }
- :root {
+}
+:root {
   --primary: #2b6777;
   --secondary: #c8d8e4 ;
   --lightgray: #f2f2f2 ;
   --success: #52ab98;
   --white: #ffffff;
   --success-primary:#52ab98b6;
+  box-sizing: border-box;
 } 
-
+*::before,::after{
+box-sizing: inherit;
+}
+body{
+  font-family:'Times New Roman', Times, serif;
+}
 body::before {
   -webkit-font-smoothing: antialiased;
   display: block;
   content: '';
   height: 60px;
-  font-family:'Times New Roman', Times, serif;
 }
 section .home{
   display: flex;
@@ -32,8 +34,41 @@ section{
   position: relative;
   width: 100%;
 }
+.bg{
+  width: 100%;
+  z-index: 0;
+}
+.bg .curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
 
- .btn, .btn:focus{
+.curve svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 118px;
+}
+.curve .shape-fill {
+  fill: #FFFFFF;
+}
+nav{
+  background-color: #ffffff;
+}
+.navbar-brand{
+  color: #000;
+}
+.nav-link{
+  color: var(--success);
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+}
+.btn, .btn:focus{
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -74,18 +109,6 @@ section{
   text-decoration: none;
   background-color: var(--lightgray);
  }
-nav{
-  background-color: #ffffff;
-}
-.navbar-brand{
-  color: #000;
-}
-.nav-link{
-  color: var(--success);
-  font-weight: bold;
-  padding: 1rem 1.5rem;
-  white-space: nowrap;
-}
 .card{
   background-color: #83C5BE;
 }
@@ -112,12 +135,55 @@ nav{
 }
 #learn{
   background-color: #EBD6D6;
+}
+.learn .col-md{
   color: #232c3f;
 }
-#learn .container{
-  color: #232c3f;
+container-meth{
+  width: 100%;
+  height: 100%;
+  background-color: #f5f3ef;
+}
+.container-meth .row {
+  padding: 1rem;
 }
 
+.container-meth .row .col-lg-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  float: none;
+}
+.container-meth .card-meth{
+  height: 320px;
+  width: 300px;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.card-meth .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.card-meth{
+  box-shadow: 2px 5px 2px #e9b35d86;
+  transition: all 200ms cubic-bezier(.164, .317, .38, .767);
+}
+.card-meth:hover{
+  transform-style: preserve-3d ;
+  box-shadow: 10px 10px 6px #e9b35d86;
+  }
+.card-body{
+  transform: perspective(1000px);
+  transform: translateZ(50px);
+}
+.card-img-top {
+  height: 11vw;
+  object-fit: contain;
+  width: 100%;
+}
 .social-menu ul{
   position: relative;
   display: flex;
@@ -130,11 +196,11 @@ nav{
   margin: 0 22px;
 }
 .social-menu ul li .bi {
-  font-size: 50px;
-  line-height: 58px;
+  font-size: 42px;
+  line-height: 60px;
   transition: .6s;
+  align-items: center;
   color: #000;
-    
 }
 .social-menu ul li .bi {
   color: #fff;
@@ -142,8 +208,8 @@ nav{
 .social-menu ul li a{
   position: relative;
   display: block;
-  width: 72px;
-  height: 72px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   background-color: #fff;
   text-align: center;
@@ -224,75 +290,6 @@ nav{
 }
 .bi-caret-up::before {
   content: "\f238";
-}
-
-.bg{
-  width: 100%;
-  z-index: 0;
-}
-.bg .curve {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.curve svg {
-  position: relative;
-  display: block;
-  width: calc(160% + 1.3px);
-  height: 118px;
-}
-.curve .shape-fill {
-  fill: #FFFFFF;
-}
-
-container-meth{
-  width: 100%;
-  height: 100%;
-  background-color: #f5f3ef;
-}
-.container-meth .row {
-  padding: 1rem;
-}
-
-.container-meth .row .col-lg-4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  float: none;
-}
-.container-meth .card-meth{
-  height: 320px;
-  width: 300px;
-  border-radius: 2rem;
-  overflow: hidden;
-}
-.card-meth .card-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-.card-meth{
-  box-shadow: 2px 5px 2px #e9b35d86;
-  transition: all 200ms cubic-bezier(.164, .317, .38, .767);
-}
-.card-meth:hover{
-  transform-style: preserve-3d ;
-  box-shadow: 10px 10px 6px #e9b35d86;
-  }
-.card-body{
-  transform: perspective(1000px);
-  transform: translateZ(50px);
-}
-.card-img-top {
-  height: 11vw;
-  object-fit: contain;
-  width: 100%;
 }
 .modal-content{
   border-radius: 20px;
