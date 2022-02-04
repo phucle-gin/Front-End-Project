@@ -34,11 +34,11 @@ section{
   position: relative;
   width: 100%;
 }
-.bg{
+.shape-break-sc{
   width: 100%;
   z-index: 0;
 }
-.bg .curve {
+.shape-break-sc .curve {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -56,6 +56,26 @@ section{
 .curve .shape-fill {
   fill: #FFFFFF;
 }
+.shape-break-lb .tilt{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.tilt svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 58px;
+  transform: rotateY(180deg);
+}
+.tilt .shape-fill {
+  fill: #FFFFFF;
+}
+
+
 nav{
   background-color: #ffffff;
 }
