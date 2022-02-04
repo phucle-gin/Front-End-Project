@@ -74,7 +74,26 @@ section{
 .tilt .shape-fill {
   fill: #FFFFFF;
 }
+.shape-break-fa .round{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.round svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 115px;
 
+  padding: bottom 0;;
+}
+.round .shape-fill {
+  fill: #EBD6D6;
+}
 
 nav{
   background-color: #ffffff;
@@ -143,6 +162,8 @@ nav{
 }
 #facts{
   background-color: #f2f2f2;
+  padding-bottom: 3rem;
+  position: relative;
 }
 #contact{
   background-color: #f2f2f2;
@@ -155,6 +176,8 @@ nav{
 }
 #learn{
   background-color: #EBD6D6;
+  padding-top: 6rem;
+  position: relative;
 }
 .learn .col-md{
   color: #232c3f;
