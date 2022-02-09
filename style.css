@@ -1,5 +1,7 @@
 * {
   border: 0;
+  margin: 0;
+  padding: 0;
 }
 :root {
   --primary: #2b6777;
@@ -13,8 +15,12 @@
 *::before,::after{
 box-sizing: inherit;
 }
-body{
+html, body{
   font-family:'Times New Roman', Times, serif;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8em;
 }
 body::before {
   -webkit-font-smoothing: antialiased;
@@ -54,6 +60,26 @@ section{
   height: 118px;
 }
 .curve .shape-fill {
+  fill: #FFFFFF;
+}
+.custom-shape-divider-top-1644236122 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1644236122 svg {
+  position: relative;
+  display: block;
+  width: calc(114% + 1.3px);
+  height: 119px;
+}
+
+.custom-shape-divider-top-1644236122 .shape-fill {
   fill: #FFFFFF;
 }
 .shape-break-lb .tilt{
@@ -129,6 +155,7 @@ nav{
   color:var(--primary) ;
   text-decoration: none;
   background-color: var(--lightgray);
+  transform: scale(0.98);
  }
 .btn-card, .btn-card:active, .btn-card:focus{
   color: var(--primary);
@@ -148,7 +175,11 @@ nav{
   text-decoration: none;
   background-color: var(--lightgray);
  }
-.card{
+.boxes{
+  background-color: #0099FF;
+}
+
+ .boxes .container .card{
   background-color: #83C5BE;
 }
 #showcase{
@@ -171,8 +202,14 @@ nav{
 #footer{
   background-color: #232c3f;
 }
-#fundamental{
-  background-color: #ffffff;
+.fundamental .container{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url(/img/shape.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #learn{
   background-color: #EBD6D6;
@@ -358,26 +395,27 @@ container-meth{
   border: 1px solid rgb(236, 236, 236);
   background: transparent;
   color: var(--white);
-}
 
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (max-width: 576px) {
-  .card-img-top {
-      height: 19vw;
-  }
+}
+.modal-dialog input:focus{
+  box-shadow: none;
+}
+@media screen and (min-width: 400px) {
   .home{
-    height: 492px;
+    height: 592px;
   }
 }
+/* Small devices (landscape phones, 576px and up) */
+
 @media screen and (min-width: 576px) {
   .card-img-top {
       height: 19vw;
   }
   .home{
-    height: 642px;
+    height: 612px;
   }
 }
-/* Medium devices (tablets, 768px and up) */
+
 @media screen and (min-width: 768px) {
   .card-img-top {
       height: 16vw;
